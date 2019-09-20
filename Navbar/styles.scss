@@ -1,0 +1,117 @@
+$break-large: 1024px;
+$break-medium: 768px;
+$break-small: 480px;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.showcase {    
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(mountain.jpg) no-repeat center center;
+    background-size: cover;    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 8vh;
+        background-color: transparent;        
+        .logo {
+            padding: 0px 20px;
+            color: #fff;
+        }
+        .nav-links {
+            padding: 0px 20px;
+            min-width: 40%;
+            right: 0;            
+            align-items: center;             
+            ul {    
+                display: flex; 
+                justify-content: space-between;          
+                li {
+                    padding: 10px 20px;
+                    a {
+                        color: #fff;
+                        font-weight: bold;
+                        letter-spacing: 4px;
+                        @media screen and (max-width: $break-large){
+                            font-size: 1em;
+                        }
+                        @media screen and (max-width: $break-medium) {
+                            font-size: .9em;
+                        }
+                        @media screen and (max-width: $break-small) {
+                            font-size: .6em;
+                        }
+                    }
+                }
+            
+            }
+            
+        }
+    }
+    .showcase-content {
+        position: absolute;
+        text-align: center;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        h2 {
+            text-transform: uppercase;
+            font-size: 3em;
+            color: #fff;
+            letter-spacing: 4px;
+            @media screen and (max-width: $break-large){
+                font-size: 2em;
+            }
+            @media screen and (max-width: $break-medium) {
+                font-size: 1.3em;
+            }
+            @media screen and (max-width: $break-small) {
+                font-size: 1.1em;
+            }
+        }
+        p {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            @media screen and (max-width: $break-large){
+                font-size: 1.5em;
+            }
+            @media screen and (max-width: $break-medium) {
+                font-size: 1.1em;
+            }
+            @media screen and (max-width: $break-small) {
+                font-size: .9em;
+            }
+        }
+        a {
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 25px;
+            color: #fff;
+            &:hover {
+                background: #000000;
+            }
+            @media screen and (max-width: $break-medium) {
+                font-size: .9em;
+                padding: 7px 20px;
+            }
+            @media screen and (max-width: $break-small) {
+                font-size: .7em;
+            }
+        }
+    }
+}
+
+
